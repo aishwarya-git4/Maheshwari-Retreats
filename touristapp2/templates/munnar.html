@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Maheshwari Retreats</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    
+    <!-- Favicon -->
+    <link href="{% static '/img/favicon.ico'%}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static '/lib/animate/animate.min.css'%}" rel="stylesheet">
+    <link href="{% static '/lib/owlcarousel/assets/owl.carousel.min.css'%}" rel="stylesheet">
+    <link href="{% static '/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css'%}" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static '/css/bootstrap.min.css'%}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{% static '/css/style.css'%}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Mumbai,India</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+91 346 62290</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>mretreats@gmail.com</small>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+                <h1 class="text-primary m-0"><i class="fa fa-map-marker-alt me-3"></i>Maheshwari Retreats</h1>
+                <!-- <img src="img/logo.png" alt="Logo"> -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="{%url 'index'%}" class="nav-item nav-link">Home</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Resorts</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="{%url 'northindia'%}" class="dropdown-item active">North India</a>
+                            <a href="{%url 'southindia'%}" class="dropdown-item">South India</a>
+                            <a href="{%url 'international'%}" class="dropdown-item">International</a>
+                            
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Hotels</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="{%url 'asia'%}" class="dropdown-item">Asia</a>
+                            <a href="{%url 'europe'%}" class="dropdown-item">Europe</a>
+                            <a href="{%url 'india'%}" class="dropdown-item">India</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <a href="{%url 'booking'%}" class="nav-item nav-link">Booking</a>
+                </div>
+                <a href="{%url 'membership'%}" class="btn btn-primary rounded-pill py-2 px-4">BECOME A MEMBER TODAY</a>
+            </div>
+        </nav>
+
+        <div class="container-fluid bg-primary py-5 mb-5 hero-header" style="background:url(/static/img/munhead3.jpg); background-repeat:no-repeat; background-size:cover">
+            <div class="container py-5">
+                <div class="row justify-content-center py-5">
+                    <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+                        <h1 style="color: white !important;" class="display-3 text-white animated slideInDown">God's Secret Sanctuary</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="{%url 'index'%}">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Resorts</a></li>
+                                <li class="breadcrumb-item"><a href="{%url 'southindia'%}">South Indian Resorts</a></li>
+                                <li class="breadcrumb-item text-white active" aria-current="page">Munnar</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar & Hero End -->
+
+
+    <!-- Team Start -->
+     
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Kerala</h6>
+                <h1 class="mb-5">Munnar, Idukki</h1>
+                            <p style="text-align:center">
+                                A Maheshwari Retreats Managed Resort
+
+                                <br>
+                                The murmur of Munnar can be heard far and wide - the rustle of tea leaves, the soft ripple of the lake, the gush of waterfalls and the wind whispering over the lush landscapes. It is in this setting - where serenity and spice mingle - that you will find Maheshwari Retreats Munnar Resort in Kerala.
+
+Our grand, cream toned resort, with its vibrant green roofs and grand entrance, stands out against a backdrop of thick green trees and blue skies. Surrounding our family resort in Munnar are tranquil tea estates and the calm Anayirangal Dam Lake.
+
+But wait! Before you close your eyes and drift off into dreams of mountains and mist, let us tell you a bit more about your time with us in Munnar. We will immerse you in bold flavours, brave adventures, rejuvenating ayurvedic treatments, rollicking DJ nights, jungle picnics and tree house dining.
+                   
+            </div>
+            <div class="container-xxl py-5 destination">
+                <div class="container">
+                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <h6 class="section-title bg-white text-center text-primary px-3">Experiences</h6>
+                        <h1 class="mb-5">Our Most Popular Activities</h1>
+                    </div>
+                    <div class="row g-3">
+                                <div class="col-lg-4 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+                                    <div class="position-relative d-block overflow-hidden" >
+                                        <img class="img-fluid" style='height:252px; width:420px'src="{% static '/img/mun1.jpg' %}" alt="">
+                                        
+                                        <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Anamudi Peak</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+                                    <div class="position-relative d-block overflow-hidden">
+                                        <img class="img-fluid" style='height:252px; width:420px' src="{%static '/img/mun2.webp'%}" alt="">
+                                        <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Mattupetty Dam</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+                                    <div class="position-relative d-block overflow-hidden">
+                                        <img class="img-fluid" style='height:252px; width:420px' src="{%static '/img/mun3.jpg'%}" alt="">
+                                        <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Kundala Lake</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+                                    <div class="position-relative d-block overflow-hidden">
+                                        <img class="img-fluid" style='height:252px; width:840px' src="{%static '/img/mun5.jpg'%}" alt="">
+                                        <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Attukal Falls</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.1s">
+                                    <div class="position-relative d-block overflow-hidden">
+                                        <img class="img-fluid" style='width:725px; height:252px'src="{%static '/img/mun4.jpg'%}" alt="">
+                                        <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Top Station</div>
+                                    </div>
+                                </div>
+                                
+                           
+                        
+                        
+
+
+
+                        
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <!-- Team End -->
+    <!--2nd resort-->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h1 class="mb-5">Luxurious Amenities Offered</h1>
+                            <p style="text-align:center">
+                                Kerala cuisine doesn’t hold back, and neither should you. Full-bodied flavours, mouthwatering ingredients and sassy spices. Join us at Barbeque Bay, where you can enjoy the tender, spiced Kozhikodan Chicken Roast, a thick Alleppey Fish Curry ladled over rice, and chunks of bold Mutton Chukka. If you are looking for fresh seafood, then you’re in the right place - plump prawns, squid and fresh fish drizzled, marinated and grilled to perfection. We also serve dishes from South Indian, North Indian, Continental and Chinese cuisines.
+
+
+Take a break from the holiday madness. Slow down at our Ayurvedic Spa and enjoy treatments like Snehana Abhyanga, herbal Kizhi therapy, our signature scrub, Svaastha Nirvana therapy and more. These treatments are enriched with herbs, oils and other natural ingredients that rejuvenate and relax you.       
+            </div>
+            
+            
+                
+                
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+    <!--2nd resort end-->
+        
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Company</h4>
+                    <a class="btn btn-link" href="{%url 'index' %}">About Us</a>
+                    <a class="btn btn-link" href="">Privacy Policy</a>
+                    <a class="btn btn-link" href="">Terms & Conditions</a>
+                    <a class="btn btn-link" href="">FAQs & Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Maheshwari Towers, 1st Floor, "A" Wing, Dr. G M Bhosle Marg, P.K. Kurne Chowk, Worli, Mumbai - 400 018,India</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 346 62290</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>mretreats@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Gallery</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="{%static '/img/package-1.jpg'%}" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="{%static '/img/package-2.jpg'%}" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="{%static '/img/package-3.jpg'%}" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="{%static '/img/package-2.jpg'%}" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="{%static '/img/package-3.jpg'%}" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="{%static '/img/package-1.jpg'%}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Newsletter</h4>
+                    <p>Subscribe to our newsletter for weekly updates on new resorts, hotels, initiatives and more!</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Maheshwari Retreats</a>, All Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="{%url 'index'%}">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FAQs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{%static '/lib/wow/wow.min.js'%}"></script>
+    <script src="{%static '/lib/easing/easing.min.js'%}"></script>
+    <script src="{%static '/lib/waypoints/waypoints.min.js'%}"></script>
+    <script src="{%static '/lib/owlcarousel/owl.carousel.min.js'%}"></script>
+    <script src="{%static '/lib/tempusdominus/js/moment.min.js'%}"></script>
+    <script src="{%static '/lib/tempusdominus/js/moment-timezone.min.js'%}"></script>
+    <script src="{%static '/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js'%}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{%static '/js/main.js'%}"></script>
+</body>
+
+</html>
